@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript and the DOM</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1 id="myHeading">JavaScript and the DOM</h1>
+    <p>Making a web page interactive</p>
+    <button id="toggleList">Hide list</button>
+    <input type="text" id="myText">
+    <button id="myButton">Make the heading great again</button>
+    <div class="list"> <!-- I create a div that selects (or contains) all these tags (components) below so I can manage them with my button-->
+      <p title="label" class="description">Things that are purple:</p>
+      <input type="text" class="description">
+      <button class="description">Change list description</button>
+      <ul>
+        <li>grapes</li>
+        <li class="error-not-purple">oranges</li>
+        <li>amethyst</li>
+        <li class="error-not-purple">fire trucks</li>
+        <li>lavender</li>
+        <li>plums</li>
+        <li class="error-not-purple">tennis ball</li>
+      </ul>
+      <input type="text" class="addItemInput">
+      <button class="addItemButton">Add item</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
