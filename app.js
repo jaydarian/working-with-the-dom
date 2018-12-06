@@ -1,3 +1,4 @@
+
 const myHeading = document.getElementsByTagName('h1')[0];
 const myButton = document.getElementById("myButton");
 const myTextInput = document.getElementById("myText");
@@ -59,3 +60,24 @@ addItemButton.addEventListener('click', () => {
     ul.appendChild(li);
     addItemInput.value = '';
 });
+
+// removing elements
+const removeItemButton = document.querySelector('button.removeItem');
+
+removeItemButton.addEventListener('click', () => { 
+    let ul = document.getElementsByTagName('ul')[0];
+    let li = document.querySelector('li:last-child');
+    ul.removeChild(li);
+});
+
+// Listening for Events with addEventListener
+const listItems = document.getElementsByTagName('li');
+for (let i = 0; i < listItems.length; i += 1) {
+    listItems[i].addEventListener('mouseover', () => {
+        listItems[i].textContent = listItems[i].textContent.toUpperCase();
+    });
+
+    listItems[i].addEventListener('mouseout', () => {
+        listItems[i].textContent = listItems[i].textContent.toLowerCase();
+    });
+}
